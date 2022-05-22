@@ -1,0 +1,14 @@
+ARG JAVA_VERSION=8
+FROM defects4jenv:JAVA${JAVA_VERSION}
+#image name defects4jenvexec:jaguar
+
+# Download GZoltar
+RUN git clone https://github.com/GZoltar/gzoltar
+
+# Install GZoltar
+RUN cd gzoltar && mvn clean install -Dgpg.skip=true
+
+# Define workdir
+WORKDIR /gzoltar/com.gzoltar.cli/target
+
+CMD ["java", "-jar", "com.gzoltar.cli-1.7.4-SNAPSHOT-jar-with-dependencies.jar"]

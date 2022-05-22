@@ -2,9 +2,10 @@
 ARG PROJECT=Lang
 ARG BUG=1
 ARG EXEC=Jaguar
+ARG JAVA_VERSION=8
 
-FROM defects4jenvexec:${EXEC}
-#image name defects4jenvexecdefect:${EXEC}_${PROJECT}_${DEFECT}
+FROM defects4jenvexec:java${JAVA_VERSION}_${EXEC}
+#image name defects4jenvexecdefect:java${JAVA_VERSION}_${EXEC}_${PROJECT}_${DEFECT}
 
 # Get Project
 RUN cd /defects4j/framework/bin && \

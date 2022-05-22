@@ -1,6 +1,6 @@
 ARG JAVA_VERSION=8
 FROM defects4jenv:java${JAVA_VERSION}
-#image name defects4jenvexec:jaguar
+#image name defects4jenvexec:java8_flacoco
 
 # Download Flacoco
 RUN git clone https://github.com/SpoonLabs/flacoco

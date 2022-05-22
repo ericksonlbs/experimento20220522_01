@@ -1,6 +1,6 @@
 #arguments
 ARG PROJECT=Lang
-ARG DEFECT=1
+ARG BUG=1
 ARG EXEC=Jaguar
 
 FROM defects4jenvexec:${EXEC}
@@ -8,10 +8,10 @@ FROM defects4jenvexec:${EXEC}
 
 # Get Project
 RUN cd /defects4j/framework/bin && \
-    defects4j checkout -p ${PROJECT} -v ${DEFECT}b -w /tmp/${PROJECT}_${DEFECT}_buggy
+    defects4j checkout -p ${PROJECT} -v ${BUG}b -w /tmp/${PROJECT}_${BUG}
 
 # Install project test
-RUN cd /tmp/${PROJECT}_${DEFECT}_buggy && mvn clean install -DskipTests
+RUN cd /tmp/${PROJECT}_${BUG} && mvn clean install -DskipTests
 
 #copy script to run
 COPY ./exec/${EXEC}_exec.sh /tmp/${EXEC}_exec.sh

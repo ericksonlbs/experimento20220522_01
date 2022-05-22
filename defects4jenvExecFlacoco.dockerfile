@@ -1,5 +1,5 @@
 ARG JAVA_VERSION=8
-FROM defects4jenv:JAVA${JAVA_VERSION}
+FROM defects4jenv:java${JAVA_VERSION}
 #image name defects4jenvexec:jaguar
 
 # Download Flacoco

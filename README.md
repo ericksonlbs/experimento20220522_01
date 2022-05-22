@@ -46,7 +46,7 @@ Sample 4: Test buggy 1 from project Lang, using GZoltar with Java 8.
 docker build --rm -f "defects4jenvExecDefect.dockerfile" -t defects4jenvexec:java8_gzoltar_lang_51 --build-arg JAVA_VERSION=8 --build-arg PROJECT=Lang --build-arg BUG=51 --build-arg EXEC=gzoltar "."
 ```
 
-###Run container
+### Run container
 
 Sample 1: Running buggy 51 from project Lang, using Jaguar with java 8
 

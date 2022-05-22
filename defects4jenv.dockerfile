@@ -27,7 +27,7 @@ RUN apt-get install -y libjson-parse-perl
 RUN cd defects4j && \
     cpanm --installdeps . && \
     ./init.sh && \
-    export PATH=$PATH:defects4j/framework/bin
+    export PATH=$PATH:/defects4j/framework/bin
 
 # Define workdir
 WORKDIR /defects4j/framework/bin/

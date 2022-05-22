@@ -2,10 +2,11 @@ ARG JAVA_VERSION=8
 FROM defects4jenv:java${JAVA_VERSION}
 #image name defects4jenvexec:java8_jaguar
 # Download Jaguar
-RUN git clone https://github.com/SIN5005-EngSoft2021/jaguar
+RUN cd / && \ 
+    git clone https://github.com/SIN5005-EngSoft2021/jaguar
 
 # Install Jaguar
-RUN cd jaguar && \
+RUN cd /jaguar && \
      mvn install:install-file -Dfile=br.usp.each.saeg.jaguar.core/lib/org.jacoco.core-0.7.6.jar \
      -DgroupId=br.usp.each.saeg -DartifactId=org.jacoco.core \
      -Dversion=0.7.6 -Dpackaging=jar && \

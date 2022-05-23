@@ -51,15 +51,15 @@ docker build --rm -f "defects4jenvExecDefect.dockerfile" -t defects4jenvexec:jav
 Sample 1: Running buggy 51 from project Lang, using Jaguar with java 8
 
 ```sh
-docker run --rm defects4jenvexec:java8_jaguar_lang_51
+docker run --rm --mount source=log,destination=/tmp/log  defects4jenvexec:java8_jaguar_lang_51
 ```
 
 Sample 2: Running buggy 51 from project Lang, using Flacoco with java 8
 ```sh
-docker run --rm defects4jenvexec:java8_flacoco_lang_51
+docker run --rm --mount source=log,destination=/tmp/log  defects4jenvexec:java8_flacoco_lang_51
 ```
 
 Sample 3: Running buggy 51 from project Lang, using GZoltar with java 8
 ```sh
-docker run --rm defects4jenvexec:java8_gzoltar_lang_51
+docker run --rm --mount source=log,destination=/tmp/log  defects4jenvexec:java8_gzoltar_lang_51
 ```

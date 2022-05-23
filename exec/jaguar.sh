@@ -16,3 +16,5 @@ java -javaagent:/jaguar/br.usp.each.saeg.jaguar.plugin/lib/jacocoagent.jar=outpu
 
 end=`date +%s%N`
 echo Execution time was `expr $end - $start` nanoseconds.
+
+echo "${EXEC};${PROJECT};${BUG};$start;$end;`expr $end - $start`" >> "/tmp/log/log.txt"

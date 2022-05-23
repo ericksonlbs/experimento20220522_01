@@ -8,3 +8,4 @@ java -cp '/flacoco/target/flacoco-1.0.6-SNAPSHOT-jar-with-dependencies.jar' fr.s
 end=`date +%s%N`
 echo Execution time was `expr $end - $start` nanoseconds.
 
+echo "${EXEC};${PROJECT};${BUG};$start;$end;`expr $end - $start`" >> "/tmp/log/log.txt"

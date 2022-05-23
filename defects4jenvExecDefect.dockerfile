@@ -10,6 +10,10 @@ ARG BUG=1
 ARG PROJECT=Lang
 ARG EXEC=jaguar
 
+ENV PROJECT=${PROJECT}
+ENV BUG=${BUG}
+ENV EXEC=${EXEC}
+
 # Get Project
 RUN cd /defects4j/framework/bin && \
     export PATH=$PATH:/defects4j/framework/bin && \
